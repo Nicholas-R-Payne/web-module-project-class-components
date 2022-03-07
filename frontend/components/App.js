@@ -8,7 +8,7 @@ export default class App extends React.Component {
         {
           name: 'Organize Garage',
           id: 1528817077286, // could look different, you could use a timestamp to generate it
-          completed: false
+          completed: true
         },
         {
           name: 'Bake Cookies',
@@ -28,7 +28,10 @@ export default class App extends React.Component {
         <ul>
           {
             todos.map(todo => {
-              return (<li key={todo.id}>{todo.name}</li>)
+              return (
+              <li key={todo.id}>
+                {todo.name} { todo.completed ? <span>completed</span> : <span></span> }
+              </li>)
             })
           }
         </ul>
