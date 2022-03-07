@@ -19,14 +19,18 @@ export default class App extends React.Component {
     }
   }
   render() {
+    const { todos } = this.state
+
     return (
       <div>
         <h2>Todos:</h2>
 
         <ul>
-          <li>Walk the dog</li>
-          <li>Learn React</li>
-          <li>Have fun</li>
+          {
+            todos.map(todo => {
+              return (<li key={todo.id}>{todo.name}</li>)
+            })
+          }
         </ul>
 
         <form>
