@@ -1,14 +1,5 @@
 import React from 'react'
-
-class Todo extends React.Component {
-  render(){
-    return(
-      <li>
-        {this.props.todo.name} { this.props.todo.completed ? <span>completed</span> : <span></span> }
-      </li>
-    )
-  }
-}
+import Todo from './Todo'
 
 export default class App extends React.Component {
   constructor() {
@@ -18,7 +9,7 @@ export default class App extends React.Component {
         {
           name: 'Organize Garage',
           id: 1528817077286, // could look different, you could use a timestamp to generate it
-          completed: true
+          completed: false
         },
         {
           name: 'Bake Cookies',
