@@ -15,14 +15,19 @@ export default class App extends React.Component {
         {
           name: 'Bake Cookies',
           id: 1528817084358,
-          completed: false
+          completed: true
         }
       ]
     }
   }
 
   handleHide = () => {
-    console.log('hide completed')
+    this.setState({
+      ...this.state,
+      todos: this.state.todos.filter(todo => {
+        return (todo.completed === false)
+      })
+    })
   }
 
   render() {
