@@ -10,7 +10,7 @@ class Form extends React.Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault()
-    this.props.handleAdd('Take out trash')
+    this.props.handleAdd(this.state.input)
   }
 
   handleChange = (evt) => {
@@ -21,7 +21,6 @@ class Form extends React.Component {
   }
 
   render() {
-    console.log(this.state.input)
     return (
       <form>
         <input onChange={this.handleChange}/>
