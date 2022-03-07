@@ -20,6 +20,11 @@ export default class App extends React.Component {
       ]
     }
   }
+
+  handleHide = () => {
+    console.log('hide completed')
+  }
+
   render() {
     const { todos } = this.state
 
@@ -27,11 +32,11 @@ export default class App extends React.Component {
       <div>
         <h2>Todos:</h2>
 
-        <TodoList todos={todos}/>
+        <TodoList todos={todos} />
 
         <Form />
 
-        <button>Hide Completed</button>
+        <button onClick={this.handleHide}>Hide Completed</button>
       </div>
     )
   }
