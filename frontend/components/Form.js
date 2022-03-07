@@ -1,11 +1,14 @@
 import React from 'react'
 
-export default class Form extends React.Component {
+class Form extends React.Component {
   render() {
     return (
-      <div>
-        Form
-      </div>
+      <form>
+        <input />
+        <button>Submit</button>
+      </form>
     )
   }
 }
+
+export default Form;
