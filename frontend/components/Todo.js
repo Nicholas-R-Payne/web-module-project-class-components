@@ -9,7 +9,7 @@ class Todo extends React.Component {
   render(){
     return(
       <li onClick={this.handleClick}>
-        {this.props.todo.name} { this.props.todo.completed ? <span>✓</span> : <span></span> }
+        {this.props.todo.name} { this.props.todo.completed ? <span>Completed</span> : <span></span> }
       </li>
     )
   }
